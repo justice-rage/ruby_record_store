@@ -13,3 +13,7 @@ get('/albums') do
   @albums = Album.all
   erb(:albums)
 end
+
+get('/albums/new') do
+  erb(:new_album)
+end
