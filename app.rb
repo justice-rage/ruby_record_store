@@ -4,7 +4,12 @@ require('./lib/album')
 require('pry')
 also_reload('lib/**/*.rb')
 
-get('/test') do
-  @something = "this is a variable"
-  erb(:whatever)
+get('/') do
+  @albums = Album.all
+  erb(:albums)
+end
+
+get('/albums') do
+  @albums = Album.all
+  erb(:albums)
 end
