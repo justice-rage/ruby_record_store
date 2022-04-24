@@ -1,6 +1,13 @@
 require 'rspec'
 require 'album'
 
+
+describe '#Album' do
+
+before(:each) do
+  Album.clear()
+end
+
 describe('#save') do
   it("saves an album") do
     album = Album.new("Giant Steps", nil) # nil added as second argument
@@ -37,5 +44,5 @@ describe '#Album' do
       expect(Album.all).to(eq([]))
     end
   end
-  
+end
 end
