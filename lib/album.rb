@@ -16,4 +16,8 @@ class Album
   def save
     @@albums[self.id] = Album.new(self.name, self.id)
   end
+
+  def ==(album_to_compare)
+    self.name() == album_to_compare.name()
+  end
 end
