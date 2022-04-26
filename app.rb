@@ -14,6 +14,14 @@ get('/albums') do
   erb(:albums)
 end
 
+post('/albums') do
+  name = params[:album_name]
+  album = Album.new(name, nil)
+  album.save()
+  @albums = Album.all()
+  erb(:albums)
+end
+
 get('/albums/new') do
   erb(:new_album)
 end
