@@ -10,8 +10,9 @@ get('/') do
 end
 
 get('/albums') do
+  binding.pry
   @albums = Album.all
-  erb(:albums)
+  # erb(:albums)
 end
 
 post('/albums') do
