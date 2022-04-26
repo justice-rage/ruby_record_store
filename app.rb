@@ -31,3 +31,8 @@ get('/albums/:id') do
   @album = Album.find(params[:id].to_i())
   erb(:album)
 end
+
+get('/albums/:id/edit') do
+  @album = Album.find(params[:id].to_i())
+  erb(:edit_album)
+end
