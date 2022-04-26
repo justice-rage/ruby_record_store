@@ -20,4 +20,8 @@
 
 <% end %>
 
+<% @albums.each do |album| %>
+  <li><a href="/albums/<%= album.id %>"><%= album.name %></a></li>
+<% end %>
+
 <a href="/albums/new">Add a new album</a>
